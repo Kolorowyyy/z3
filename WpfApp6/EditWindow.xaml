@@ -1,0 +1,40 @@
+﻿<Window x:Class="MovieAlbumApp.EditWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Edit" Height="500" Width="500">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Label Grid.Row="0" Content="Tytuł" Margin="5"/>
+        <TextBox Grid.Row="1" Text="{Binding Tytuł, Mode=TwoWay}" Margin="5"/>
+        <Label Grid.Row="2" Content="Reżyser/Autor" Margin="5"/>
+        <TextBox Grid.Row="3" Text="{Binding Reżyser, Mode=TwoWay}" Margin="5"/>
+        <Label Grid.Row="4" Content="Wydawca/Studio" Margin="5"/>
+        <TextBox Grid.Row="5" Text="{Binding Wydawca, Mode=TwoWay}" Margin="5"/>
+        <Label Grid.Row="6" Content="Nośnik" Margin="5"/>
+        <TextBox Grid.Row="7" Text="{Binding Nośnik, Mode=TwoWay}" Margin="5"/>
+        <Label Grid.Row="8" Content="Długość" Margin="5"/>
+        <TextBox Grid.Row="9" Text="{Binding Długość, Mode=TwoWay}" Margin="5"/>
+        <StackPanel Grid.Row="10" Orientation="Horizontal" HorizontalAlignment="Right" Margin="5">
+            <Label Content="Data Wydania" Margin="0,0,10,0"/>
+            <TextBox Text="{Binding DataWydania, Mode=TwoWay}"/>
+        </StackPanel>
+        <StackPanel Grid.Row="11" Orientation="Horizontal" HorizontalAlignment="Right" Margin="5">
+            <Button Content="OK" Margin="0" Padding="5,2" Click="OkButton_Click"/>
+            <Button Content="Anuluj" Margin="10,0,0,0" Padding="5,2" Click="CancelButton_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>
